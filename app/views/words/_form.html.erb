@@ -11,13 +11,8 @@
     </div>
   <% end %>
 
-  <div style='
-    diplay: flex;
-    flex-direction: row;
-    background-color: yellow;
-  '>
-    <%= form.text_field :newWord %>
-    <%= form.text_field :translation %>
-    <%= form.submit %>
-  </div>
+  <%= form.text_field :newWord %>
+  <%= form.text_field :translation %>
+  <%= form.submit %>
+
 <% end %>
