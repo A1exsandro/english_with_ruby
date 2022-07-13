@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Words</h1>
+  <%= render 'form', word: @word %>
+  <% @words.each do |word| %>
+    <div
+      style=' 
+        display: inline-block;
+      '>
+      <div
+        style='
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 20px; 
+          background-color: blue;
+          text-align: center;
+          padding-top: 5px;
+          margin: 5px; 
+          width: 100px; 
+          height: 100px;
+        '>
+        <%= word.newWord %>
+      </div>
+    </div>
+  <% end %>
+  
+<br>
+
+<%= link_to 'New Word', new_word_path %>
