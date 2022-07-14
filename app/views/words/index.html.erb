@@ -2,14 +2,25 @@
   <h1>Words</h1>
   <%= render 'form', word: @word %>
 </div>
-
-<p id="notice"><%= notice %></p>
+  
 
   <% @words.each do |word| %>
     <div style='display: inline-block;'>
-      <div class='newWord'>
-        <%= word.newWord %>
+      <div data-controller="toggle">
+        <div data-toggle-target="slide" >
+          <button class='word' data-action="toggle#word">
+            <%= word.newWord %>
+          </button>
+        </div>
+        <div data-toggle-target="slide">
+          <button class='translation' data-action="toggle#translation">
+            <%= word.translation %>
+          </button>
+        </div>
       </div>
     </div>
   <% end %>
+
+
+<p id="notice"><%= notice %></p>
 </div>
