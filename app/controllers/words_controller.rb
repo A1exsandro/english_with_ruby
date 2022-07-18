@@ -9,10 +9,12 @@ class WordsController < ApplicationController
 
   # GET /words/1 or /words/1.json
   def show
+    @word = Word.new
   end
 
   # GET /words/new
-  def new  
+  def new 
+    @word = Word.new 
   end
 
   # GET /words/1/edit
