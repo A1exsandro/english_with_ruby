@@ -5,7 +5,29 @@
 h1 {
   color: white;
 }
+
+.container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding-top: 5px;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease-in-out;
+}
+
+.container:hover .card{
+  transform: rotateY(180deg);
+}
+
 .word {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,13 +36,14 @@ h1 {
   font-size: 15px; 
   background-color: blue;
   text-align: center;
-  padding-top: 5px;
-  margin: 5px; 
   width: 100px; 
   height: 100px;
   border: none;
+  backface-visibility: hidden;
 }
+
 .translation {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,10 +52,10 @@ h1 {
   font-size: 15px; 
   background-color: yellow;
   text-align: center;
-  padding-top: 5px;
-  margin: 5px; 
   width: 100px; 
   height: 100px;
   border: none;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
   

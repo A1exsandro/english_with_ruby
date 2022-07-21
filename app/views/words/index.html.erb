@@ -4,22 +4,18 @@
 </div>
   
 
-  <% @words.each do |word| %>
-    <div style='display: inline-block;'>
-      <div data-controller="toggle">
-        <div data-toggle-target="slide" >
-          <button class='word' data-action="toggle#word">
-            <%= word.newWord %>
-          </button>
-        </div>
-        <div data-toggle-target="slide">
-          <button class='translation' data-action="toggle#translation">
-            <%= word.translation %>
-          </button>
-        </div>
+<% @words.each do |word| %>
+  <div class='container' style='display: inline-block;'>
+    <div class='card' data-controller="toggle">
+      <div class='word' data-action="toggle#word" data-toggle-target="slide" >
+        <%= word.newWord %>
+      </div>
+      <div class='translation' data-action="toggle#translation" data-toggle-target="slide">
+        <%= word.translation %>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>
 
 
 <p id="notice"><%= notice %></p>
